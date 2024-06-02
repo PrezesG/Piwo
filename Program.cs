@@ -18,8 +18,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
-        builder.WithOrigins("http://localhost:5095", "http://localhost:3000")
+    options.AddDefaultPolicy(policyBuilder =>
+        policyBuilder.WithOrigins("http://localhost:5095", "http://localhost:3000")
                .AllowAnyHeader()
                .AllowAnyMethod());
 });
@@ -27,8 +27,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<ILoginAndRegisterService, LoginAndRegisterService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
-builder.Services.AddScoped<ICourseService, CourseService>();
-builder.Services.AddScoped<IUserCourseService, UserCourseService>();
+builder.Services.AddScoped<IBeerService, BeerService>();
+builder.Services.AddScoped<IUserBeerService, UserBeerService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -73,7 +73,7 @@ builder.Services.AddAuthentication(options =>
                     var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
                     logger.LogError($"Authentication failed. Exception: {context.Exception.Message}");
                     var sanitizedMessage = Regex.Replace(context.Exception.Message, @"[^\u0020-\u007E]", string.Empty);
-                    context.Response.Headers.Add("Authentication-Failed", sanitizedMessage);
+                    context.Response.Headers.Append("Authentication-Failed", sanitizedMessage);
                     return Task.CompletedTask;
                 }
         };
