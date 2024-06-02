@@ -76,5 +76,23 @@ namespace Piwo.Services
 
             return favouriteBeers;
         }
+        public async Task<BeerDto> GetRandomBeerAsync()
+        {
+            return await _context.Beers
+                .OrderBy(r => Guid.NewGuid())
+                .Select(b => new BeerDto
+                {
+                    BeerId = b.BeerId,
+                    Name = b.Name,
+                    Producer = b.Producer,
+                    Description = b.Description,
+                    Image = b.Image,
+                    Alcohol = b.Alcohol,
+                    Price = b.Price,
+                    AverageRating = b.UserBeers.Any(ub => ub.Score.HasValue) ? b.UserBeers.Average(ub => ub.Score.Value) : (double?)null,
+                    RatingCount = b.UserBeers.Any(ub => ub.Score.HasValue) ? b.UserBeers.Count(ub => ub.Score.HasValue) : (int?)null
+                })
+                .FirstOrDefaultAsync();
+        }
     }
 }

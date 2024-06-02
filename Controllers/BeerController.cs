@@ -33,5 +33,11 @@ namespace Piwo.Controllers
             var beers = await _beerService.GetFavouriteBeersAsync(userId);
             return Ok(beers);
         }
+        [HttpGet("random")]
+        public async Task<IActionResult> GetRandom()
+        {
+            var beer = await _beerService.GetRandomBeerAsync();
+            return Ok(beer);
+        }
     }
 }
