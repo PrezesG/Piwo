@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Piwo.Interfaces;
 
 namespace Piwo.Controllers
@@ -27,6 +26,12 @@ namespace Piwo.Controllers
         {
             var beer = await _beerService.GetBeerByIdAsync(id);
             return Ok(beer);
+        }
+        [HttpGet("favourites/{userId}")]
+        public async Task<IActionResult> GetFavouriteBeers(string userId)
+        {
+            var beers = await _beerService.GetFavouriteBeersAsync(userId);
+            return Ok(beers);
         }
     }
 }

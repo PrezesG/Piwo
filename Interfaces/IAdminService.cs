@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Piwo.Dtos;
+﻿using Piwo.Dtos;
 using Microsoft.AspNetCore.Identity;
 
 namespace Piwo.Interfaces

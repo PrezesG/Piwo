@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using Piwo.Services;
 using Piwo.Dtos;
 using Piwo.Interfaces;
-using Microsoft.AspNetCore.Identity;
 
 [Authorize(Roles = "Admin")]
 [ApiController]

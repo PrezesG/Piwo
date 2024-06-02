@@ -12,6 +12,7 @@ namespace Piwo.Data
 
         public DbSet<Beer> Beers { get; set; }
         public DbSet<UserBeer> UserBeers { get; set; }
+        public DbSet<BeerComment> BeerComments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -29,6 +30,16 @@ namespace Piwo.Data
                 .HasOne(ub => ub.Beer)
                 .WithMany(b => b.UserBeers)
                 .HasForeignKey(ub => ub.BeerId);
+
+            builder.Entity<BeerComment>()
+                .HasOne(bc => bc.User)
+                .WithMany(u => u.BeerComments)
+                .HasForeignKey(bc => bc.UserId);
+
+            builder.Entity<BeerComment>()
+                .HasOne(bc => bc.Beer)
+                .WithMany(b => b.BeerComments)
+                .HasForeignKey(bc => bc.BeerId);
         }
     }
 }

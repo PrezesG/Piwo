@@ -18,5 +18,6 @@ namespace Piwo.Models
         public double Alcohol { get; set; }
         public double Price { get; set; }
         public List<UserBeer> UserBeers { get; set; }
+        public List<BeerComment> BeerComments { get; set; }
     }
 }

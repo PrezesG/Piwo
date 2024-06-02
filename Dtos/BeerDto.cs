@@ -9,4 +9,8 @@ public class BeerDto
     public string Image { get; set; }
     public double Alcohol { get; set; }
     public double Price { get; set; }
+    
+    public double? AverageRating { get; set; }
+    public int? RatingCount { get; set; }
+    
 }

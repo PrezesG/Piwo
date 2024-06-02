@@ -1,9 +1,8 @@
 using Piwo.Dtos;
 using Piwo.Interfaces;
 using Piwo.Data;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Piwo.Services
 {
@@ -27,7 +26,9 @@ namespace Piwo.Services
                     Description = b.Description,
                     Image = b.Image,
                     Alcohol = b.Alcohol,
-                    Price = b.Price
+                    Price = b.Price,
+                    AverageRating = b.UserBeers.Any(ub => ub.Score.HasValue) ? b.UserBeers.Average(ub => ub.Score.Value) : (double?)null,
+                    RatingCount = b.UserBeers.Any(ub => ub.Score.HasValue) ? b.UserBeers.Count(ub => ub.Score.HasValue) : (int?)null
                 })
                 .ToListAsync();
         }
@@ -49,8 +50,31 @@ namespace Piwo.Services
                 Description = beer.Description,
                 Image = beer.Image,
                 Alcohol = beer.Alcohol,
-                Price = beer.Price
+                Price = beer.Price,
+                AverageRating = beer.UserBeers.Any(ub => ub.Score.HasValue) ? beer.UserBeers.Average(ub => ub.Score.Value) : (double?)null,
+                RatingCount = beer.UserBeers.Any(ub => ub.Score.HasValue) ? beer.UserBeers.Count(ub => ub.Score.HasValue) : (int?)null
             };
+        }
+
+        public async Task<IEnumerable<BeerDto>> GetFavouriteBeersAsync(string userId)
+        {
+            var favouriteBeers = await _context.UserBeers
+                .Where(ub => ub.UserId == userId && ub.IsFavourite)
+                .Select(ub => new BeerDto
+                {
+                    BeerId = ub.Beer.BeerId,
+                    Name = ub.Beer.Name,
+                    Producer = ub.Beer.Producer,
+                    Description = ub.Beer.Description,
+                    Image = ub.Beer.Image,
+                    Alcohol = ub.Beer.Alcohol,
+                    Price = ub.Beer.Price,
+                    AverageRating = ub.Beer.UserBeers.Any(ub => ub.Score.HasValue) ? ub.Beer.UserBeers.Average(ub => ub.Score.Value) : (double?)null,
+                    RatingCount = ub.Beer.UserBeers.Any(ub => ub.Score.HasValue) ? ub.Beer.UserBeers.Count(ub => ub.Score.HasValue) : (int?)null
+                })
+                .ToListAsync();
+
+            return favouriteBeers;
         }
     }
 }

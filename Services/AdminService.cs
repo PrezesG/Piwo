@@ -5,7 +5,6 @@ using Piwo.Interfaces;
 using Piwo.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using Piwo.Data;
-using System.Collections.Generic;
 
 
 public class AdminService : IAdminService
@@ -37,8 +36,7 @@ public class AdminService : IAdminService
 
             _context.Beers.Add(beer);
             await _context.SaveChangesAsync();
-
-            // Zaktualizuj beerDto z nowym ID i zwróć
+            
             beerDto.BeerId = beer.BeerId;
             _logger.LogInformation("Piwo {Name} zostało pomyślnie utworzone", beerDto.Name);
             return beerDto;
