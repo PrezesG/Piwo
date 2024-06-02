@@ -8,4 +8,5 @@ public interface IBeerService
     Task<IEnumerable<BeerDto>> GetFavouriteBeersAsync(string userId);
     
     Task<BeerDto> GetRandomBeerAsync();
+    Task<(BeerDto, BeerDto)> GetTwoRandomBeersAsync();
 }
