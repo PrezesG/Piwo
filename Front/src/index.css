@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    html:has(.drawer-auto-gutter .drawer-toggle:checked){
+        scrollbar-gutter: auto;
+    }
+}
+@layer components{
+    html:has(.modal-open .modal-toggle:checked){
+        scrollbar-gutter: auto;
+    }
+}
+.no-scrollbar {
+    /* For Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-gutter: auto;
+
+    /* For Firefox */
+    scrollbar-width: none;
+
+    /* Enable scrolling */
+    overflow-y: auto;
+}
+.container-with-beer-cards {
+    /* For Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-gutter: auto;
+
+    /* For Firefox */
+    scrollbar-width: none;
+
+    /* Enable scrolling */
+    overflow-y: auto;
+}
+.home {
+
+    /* For Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-gutter: auto;
+
+
+    /* For Firefox */
+    scrollbar-width: none;
+
+    /* Enable scrolling */
+    overflow-y: hidden;
+}
+*, ::before, ::after {
+    --tw-scroll-snap-strictness: none;
+
+}
+
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+    scrollbar-gutter: auto;
+}

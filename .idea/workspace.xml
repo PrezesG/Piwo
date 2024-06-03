@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5283d41-eb21-4e56-bd8e-03cfe85e506d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo.dir/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Piwo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AdminController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/BeerCommentController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/BeerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/LoginAndRegisterController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MemberController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserBeerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/BeerCommentDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/BeerDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/LoginDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/MemberDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/RegisterDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/TokenDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/UserBeerDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dtos/UserDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/UserNotFoundException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IAdminService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IBeerCommentService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IBeerService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/ILoginAndRegisterService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IMemberService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IUserBeerService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Beer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/BeerComment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ErrorViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserBeer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Piwo.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Piwo.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AdminService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/BeerCommentService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/BeerService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/LoginAndRegisterService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/MemberService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UserBeerService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2hKL7HsaTp5TEsErxcJCLydcKBU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Front",
+    "last_opened_file_path": "D:/REpos/Piwo/Front",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5283d41-eb21-4e56-bd8e-03cfe85e506d" name="Changes" comment="" />
+      <created>1717337654202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717337654202</updated>
+      <workItem from="1717337655222" duration="940000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
