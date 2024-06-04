@@ -44,5 +44,11 @@ namespace Piwo.Controllers
             var beers = await _beerService.GetFavouriteBeersAsync(userId);
             return Ok(beers);
         }
+        [HttpPost("initialize")]
+        public async Task<IActionResult> InitializeBeer()
+        {
+            await _beerService.InitializeBeerAsync();
+            return Ok();
+        }
     }
 }

@@ -3,6 +3,7 @@ using Piwo.Interfaces;
 using Piwo.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Piwo.Models;
 
 namespace Piwo.Services
 {
@@ -75,6 +76,22 @@ namespace Piwo.Services
                 .ToListAsync();
 
             return favouriteBeers;
+        }
+
+        public async Task InitializeBeerAsync()
+        {
+            
+            var beer1 = new Beer { Name = "Tyskie", Producer = "Tyskie S.P. Zoo", Description = "Piwo Tyskie", Alcohol = 5.0, Price =9.0 };
+            var beer2 = new Beer { Name = "Żubr", Producer = "Żubr S.P.Zoo", Description = "Piwo żubr",  Alcohol = 5.0, Price = 7.0 };
+            var beer3 = new Beer { Name = "Lech", Producer = "Lech S.P.Zoo", Description = "Piwo Lech", Alcohol = 5.0, Price = 6.0 };
+
+           
+            _context.Beers.Add(beer1);
+            _context.Beers.Add(beer2);
+            _context.Beers.Add(beer3);
+
+            
+            await _context.SaveChangesAsync();
         }
     }
 }
