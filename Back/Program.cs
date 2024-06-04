@@ -128,6 +128,8 @@ using (var scope = app.Services.CreateScope())
     await loginAndRegisterService.CreateRoles();
     var userService = scope.ServiceProvider.GetRequiredService<IAdminService>();
     await userService.InitializeAdminAsync();
+    var beerService = scope.ServiceProvider.GetRequiredService<IBeerService>();
+    await beerService.InitializeBeerAsync();
 }
 
 app.UseCors();
