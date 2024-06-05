@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piwo", "Piwo.csproj", "{E0582F14-4C38-4E36-B01D-3D2A47BF4087}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piwo", "Piwo.csproj", "{E0582F14-4C38-4E36-B01D-3D2A47BF4087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piwo.UnitTests", "..\Piwo.UnitTests\Piwo.UnitTests.csproj", "{BEDC38DD-A619-48EC-B5AC-1DC716AEBC03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{E0582F14-4C38-4E36-B01D-3D2A47BF4087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0582F14-4C38-4E36-B01D-3D2A47BF4087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0582F14-4C38-4E36-B01D-3D2A47BF4087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDC38DD-A619-48EC-B5AC-1DC716AEBC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDC38DD-A619-48EC-B5AC-1DC716AEBC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDC38DD-A619-48EC-B5AC-1DC716AEBC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDC38DD-A619-48EC-B5AC-1DC716AEBC03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F868F416-E8EC-4ECE-9036-50B5CA4D77B6}
 	EndGlobalSection
 EndGlobal
